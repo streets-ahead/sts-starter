@@ -1,0 +1,8 @@
+def filterDirs = ['.'];
+
+task filterHtml () {
+	FileTree htmlFiles = fileTree(dirs : filterDirs, include : '*.html')
+	htmlFiles.each{File file ->
+		println file.name
+	}
+}
